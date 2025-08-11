@@ -2,7 +2,7 @@ const modal = document.querySelector(".modal");
 const openModalBtn = document.querySelector("#btn-get");
 const closeModalBtn = document.querySelector(".modal_close");
 
-let timerId = setTimeout(openModalOnce, 5000);
+let timerId = setTimeout(openModalOnce, 10000);
 let modalOpened = false;
 
 function openModalOnce() {
