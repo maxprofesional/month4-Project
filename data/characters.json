@@ -1,0 +1,256 @@
+[
+  {
+    "name": "Джек Воробей",
+    "age": 45,
+    "photo": "https://lumiere-a.akamaihd.net/v1/images/e12c6b042ba46e43697492be6bce82e81409abd7.jpeg?region=0,0,450,450"
+  },
+  {
+    "name": "Наруто Удзумаки",
+    "age": 17,
+    "photo": "https://i.pinimg.com/736x/24/c3/e2/24c3e23ed4998498db67edcbf88dba7d.jpg"
+  },
+  {
+    "name": "Джейсон Стетхем",
+    "age": 57,
+    "photo": "https://www.m24.ru/b/d/nBkSUhL2gVUgmciwPqzJrMCqzJ3w-pun2XyQ2q2C_2OZcGuaSnvVjCdg4M4S7FjDvM_AtC_QbIk8W7zj1GdwKSGT_w=hijVfsBjYZbY4CblM_OjGg.jpg"
+  },
+  {
+    "name": "Тони Старк",
+    "age": 48,
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYqDmswGdofA7YRwk116Dv0Hg9klq-dLJjtbAC2-n8GG4P7rzoBB3a7Bvm7xvnhrrTJs&usqp=CAU"
+  },
+  {
+    "name": "Геральт из Ривии",
+    "age": 100,
+    "photo": "https://cdn.27.ua/sc--media--prod/default/65/90/10/6590102a-ef39-4530-a2cc-984e1e4eb51d.jpg"
+  },
+  {
+    "name": "Халк",
+    "age": 49,
+    "photo": "https://cdn.vokrug.tv/pic/person/4/c/3/8/4c385380340d56acd318cf77d7777924.jpeg"
+  },
+  {
+    "name": "Халк",
+    "age": 49,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Гарри Поттер",
+    "age": 20,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Рон Уизли",
+    "age": 20,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Гермиона Грейнджер",
+    "age": 20,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Северус Снегг",
+    "age": 45,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Альбус Дамблдор",
+    "age": 115,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Люк Скайуокер",
+    "age": 25,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Дарт Вейдер",
+    "age": 46,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Хан Соло",
+    "age": 35,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Лея Органа",
+    "age": 25,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Человек-Паук",
+    "age": 21,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Капитан Америка",
+    "age": 102,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Тор",
+    "age": 1500,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Чёрная Вдова",
+    "age": 35,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Соколиный Глаз",
+    "age": 40,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Бэтмен",
+    "age": 38,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Супермен",
+    "age": 35,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Чудо-Женщина",
+    "age": 5000,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Флэш",
+    "age": 28,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Аквамен",
+    "age": 32,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Соник",
+    "age": 15,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Марио",
+    "age": 40,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Луиджи",
+    "age": 39,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Лара Крофт",
+    "age": 29,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Кратос",
+    "age": 200,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Скорпион",
+    "age": 50,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Саб-Зиро",
+    "age": 45,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Райден",
+    "age": 1000,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Китана",
+    "age": 10000,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Пикачу",
+    "age": 5,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Аш Кетчум",
+    "age": 10,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Мисти",
+    "age": 12,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Брок",
+    "age": 15,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Рик Санчез",
+    "age": 70,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Морти Смит",
+    "age": 14,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Самус Аран",
+    "age": 32,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Гэндальф",
+    "age": 2019,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Фродо Бэггинс",
+    "age": 33,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Сэм Гэмджи",
+    "age": 33,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Арагорн",
+    "age": 87,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Леголас",
+    "age": 2931,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+
+  {
+    "name": "Шерлок Холмс",
+    "age": 40,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  },
+  {
+    "name": "Доктор Ватсон",
+    "age": 42,
+    "photo": "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-avatar-vector-isolated-on-white-background-png-image_4979074.jpg"
+  }
+]

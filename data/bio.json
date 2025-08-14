@@ -1,0 +1,11 @@
+{
+  "firstName": "Улан",
+  "lastName": "Бакытов",
+  "age": 25,
+  "hobbies": ["Программирование", "Игра на пианино", "Чтение манги"],
+  "job": {
+    "position": "Доставка одежды/товар",
+    "location": "Алматы, Казахстан"
+  },
+  "favoriteProgrammingLanguages": ["C#", "JavaScript", "Python"]
+}

@@ -71,3 +71,73 @@ function timer() {
   count++;
   resultTimerBlock.textContent = count;
 }
+
+//Characters Home work #4
+
+const charactersList = document.querySelector(".characters-list");
+
+let characters = [];
+let page = 8;
+
+function renderCard(data) {
+  if (page > characters.length) removeEventListener("scroll", scrollEnd);
+  charactersList.innerHTML = "";
+  data.forEach((item, index) => {
+    if (index <= page - 1) {
+      const card = document.createElement("DIV");
+      card.classList.add("character-card");
+      card.innerHTML = `
+      <div class="character-photo">
+        <img
+          src="${item.photo}"
+          alt=""
+        />
+      </div>
+      <p>Имя: ${item.name}</p>
+      <p>Возраст: ${item.age}</p>
+    `;
+      charactersList.appendChild(card);
+    }
+  });
+  page += 8;
+}
+
+window.addEventListener("scroll", scrollEnd);
+
+const request = new XMLHttpRequest();
+request.open("GET", "../data/characters.json");
+request.send();
+
+request.onload = () => {
+  characters = JSON.parse(request.response);
+  renderCard(characters);
+};
+
+function scrollEnd() {
+  const scrollTop = document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  const fullHeight = document.documentElement.scrollHeight;
+  if (scrollTop + windowHeight >= fullHeight - 3) {
+    renderCard(characters);
+  }
+}
+
+const bioRequest = new XMLHttpRequest();
+bioRequest.open("GET", "../data/bio.json");
+bioRequest.send();
+
+bioRequest.onload = () => {
+  const data = JSON.parse(bioRequest.response);
+
+  let formatData = `
+    ФИО: ${data.firstName} ${data.lastName}
+    Возраст: ${data.age}
+    Увлечения: ${data.hobbies.join(", ")}
+    Работа: ${data.job.position} в ${data.job.location}
+    Любимые языки программирования: ${data.favoriteProgrammingLanguages.join(
+      ", "
+    )}
+  `;
+
+  console.log(formatData);
+};
