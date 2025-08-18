@@ -53,3 +53,41 @@ let currentIndex = 0;
 hideTabContent();
 showTabContent();
 showAutoSlide();
+
+// converter home work #5
+
+const usdInput = document.querySelector("#usd");
+const somInput = document.querySelector("#som");
+const eurInput = document.querySelector("#eur");
+
+function converter(element, secondElement, thirtyElement) {
+  element.oninput = () => {
+    const request = new XMLHttpRequest();
+    request.open("GET", "../data/currency.json");
+    request.send();
+
+    request.onload = () => {
+      const data = JSON.parse(request.response);
+      if (element.id === "som") {
+        secondElement.value = (element.value / data.usd).toFixed(2);
+        thirtyElement.value = (element.value / data.eur).toFixed(2);
+      }
+      if (element.id === "usd") {
+        secondElement.value = (element.value * data.usd).toFixed(2);
+        thirtyElement.value = (secondElement.value / data.eur).toFixed(2);
+      }
+      if (element.id === "eur") {
+        thirtyElement.value = (element.value * data.eur).toFixed(2);
+        secondElement.value = (thirtyElement.value / data.usd).toFixed(2);
+      }
+      if (element.value === "") {
+        secondElement.value = "";
+        thirtyElement.value = "";
+      }
+    };
+  };
+}
+
+converter(somInput, usdInput, eurInput);
+converter(usdInput, somInput, eurInput);
+converter(eurInput, usdInput, somInput);
