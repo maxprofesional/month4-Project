@@ -48,7 +48,7 @@ function stopShowAutoSlide() {
 }
 
 let showIntervalId = null;
-let currentIndex = 0;
+let currentCurrency = 0;
 
 hideTabContent();
 showTabContent();
@@ -60,34 +60,109 @@ const usdInput = document.querySelector("#usd");
 const somInput = document.querySelector("#som");
 const eurInput = document.querySelector("#eur");
 
-function converter(element, secondElement, thirtyElement) {
-  element.oninput = () => {
-    const request = new XMLHttpRequest();
-    request.open("GET", "../data/currency.json");
-    request.send();
+const parentBlockInput = document.querySelector(".inner_converter");
+const arrInput = parentBlockInput.querySelectorAll("input");
 
-    request.onload = () => {
-      const data = JSON.parse(request.response);
-      if (element.id === "som") {
-        secondElement.value = (element.value / data.usd).toFixed(2);
-        thirtyElement.value = (element.value / data.eur).toFixed(2);
-      }
-      if (element.id === "usd") {
-        secondElement.value = (element.value * data.usd).toFixed(2);
-        thirtyElement.value = (secondElement.value / data.eur).toFixed(2);
-      }
-      if (element.id === "eur") {
-        thirtyElement.value = (element.value * data.eur).toFixed(2);
-        secondElement.value = (thirtyElement.value / data.usd).toFixed(2);
-      }
-      if (element.value === "") {
-        secondElement.value = "";
-        thirtyElement.value = "";
-      }
+function requestCurrency() {
+  const request = new XMLHttpRequest();
+  request.open("GET", "../data/currency.json");
+  request.send();
+  let data = null;
+  request.onload = () => {
+    data = JSON.parse(request.response);
+    parentBlockInput.oninput = (event) => {
+      arrInput.forEach((element, index) => {
+        if (element.id === event.target.id) {
+          if (index === 0) {
+            arrInput[index + 1].value = (element.value / data.usd).toFixed(2);
+            arrInput[index + 2].value = (element.value / data.eur).toFixed(2);
+          }
+          if (index === 1) {
+            arrInput[index - 1].value = (element.value * data.usd).toFixed(2);
+            arrInput[2].value = (arrInput[0].value / data.eur).toFixed(2);
+          }
+          if (index === 2) {
+            arrInput[index + 1].value = (element.value / data.usd).toFixed(2);
+          }
+        }
+      });
     };
   };
 }
+requestCurrency();
 
-converter(somInput, usdInput, eurInput);
-converter(usdInput, somInput, eurInput);
-converter(eurInput, usdInput, somInput);
+// function converter(element, secondElement, thirtyElement) {
+//   element.oninput = () => {
+//     const request = new XMLHttpRequest();
+//     request.open("GET", "../data/currency.json");
+//     request.send();
+
+//     request.onload = () => {
+//       const data = JSON.parse(request.response);
+//       if (element.id === "som") {
+//         secondElement.value = (element.value / data.usd).toFixed(2);
+//         thirtyElement.value = (element.value / data.eur).toFixed(2);
+//       }
+//       if (element.id === "usd") {
+//         secondElement.value = (element.value * data.usd).toFixed(2);
+//         thirtyElement.value = (secondElement.value / data.eur).toFixed(2);
+//       }
+//       if (element.id === "eur") {
+//         thirtyElement.value = (element.value * data.eur).toFixed(2);
+//         secondElement.value = (thirtyElement.value / data.usd).toFixed(2);
+//       }
+//       if (element.value === "") {
+//         secondElement.value = "";
+//         thirtyElement.value = "";
+//       }
+//     };
+//   };
+// }
+
+// converter(somInput, usdInput, eurInput);
+// converter(usdInput, somInput, eurInput);
+// converter(eurInput, usdInput, somInput);
+
+// CARD SWITCHER
+
+const btnNext = document.querySelector("#btn-next");
+const btnPrev = document.querySelector("#btn-prev");
+const card = document.querySelector(".card");
+
+const todosURL = "https://jsonplaceholder.typicode.com/todos";
+const postsURL = "https://jsonplaceholder.typicode.com/posts";
+
+let index = 0;
+
+async function request(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+async function move(event = null) {
+  const data = await request(todosURL);
+  if (event?.target === btnPrev) index--;
+  if (event?.target === btnNext) index++;
+  if (index < 0) index = data.length - 1;
+  if (index > data.length - 1) index = 0;
+
+  card.innerHTML = `
+  <h2>${data[index].id}</h2>
+  <span>${data[index].title}</span>
+  <p style='color: ${data[index].completed ? "green" : "red"}'>${
+    data[index].completed
+  }</p>
+  `;
+}
+
+move();
+
+btnPrev.onclick = move;
+btnNext.onclick = move;
+
+// part 2 home work 6
+
+request(postsURL).then((data) => {
+  console.log(data);
+});
