@@ -1,0 +1,46 @@
+/* Родительский блок для карточек */
+.carts-parent {
+  padding: 20px;
+  background: #f8f9fa; /* светлый фон */
+}
+
+.carts_block {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* адаптивная сетка */
+  gap: 20px;
+}
+
+/* Карточка */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Картинка */
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* чтобы картинка не растягивалась */
+  display: block;
+}
+
+/* Контент */
+.card-content {
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}

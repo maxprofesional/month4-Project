@@ -63,30 +63,25 @@ const eurInput = document.querySelector("#eur");
 const parentBlockInput = document.querySelector(".inner_converter");
 const arrInput = parentBlockInput.querySelectorAll("input");
 
-function requestCurrency() {
-  const request = new XMLHttpRequest();
-  request.open("GET", "../data/currency.json");
-  request.send();
-  let data = null;
-  request.onload = () => {
-    data = JSON.parse(request.response);
-    parentBlockInput.oninput = (event) => {
-      arrInput.forEach((element, index) => {
-        if (element.id === event.target.id) {
-          if (index === 0) {
-            arrInput[index + 1].value = (element.value / data.usd).toFixed(2);
-            arrInput[index + 2].value = (element.value / data.eur).toFixed(2);
-          }
-          if (index === 1) {
-            arrInput[index - 1].value = (element.value * data.usd).toFixed(2);
-            arrInput[2].value = (arrInput[0].value / data.eur).toFixed(2);
-          }
-          if (index === 2) {
-            arrInput[index + 1].value = (element.value / data.usd).toFixed(2);
-          }
+async function requestCurrency() {
+  const request = await fetch("../data/currency.json");
+  const data = await request.json();
+  parentBlockInput.oninput = (event) => {
+    arrInput.forEach((element, index) => {
+      if (element.id === event.target.id) {
+        if (index === 0) {
+          arrInput[index + 1].value = (element.value / data.usd).toFixed(2);
+          arrInput[index + 2].value = (element.value / data.eur).toFixed(2);
         }
-      });
-    };
+        if (index === 1) {
+          arrInput[index - 1].value = (element.value * data.usd).toFixed(2);
+          arrInput[2].value = (arrInput[0].value / data.eur).toFixed(2);
+        }
+        if (index === 2) {
+          arrInput[index + 1].value = (element.value / data.usd).toFixed(2);
+        }
+      }
+    });
   };
 }
 requestCurrency();
@@ -163,6 +158,24 @@ btnNext.onclick = move;
 
 // part 2 home work 6
 
-request(postsURL).then((data) => {
-  console.log(data);
-});
+// request(postsURL).then((data) => {
+//   console.log(data);
+// });
+
+// Weather
+
+const searchInput = document.querySelector(".cityName");
+const searchButton = document.querySelector("#search");
+const city = document.querySelector(".city");
+const temp = document.querySelector(".temp");
+const API_KEY = "e417df62e04d3b1b111abeab19cea714";
+
+searchButton.onclick = () => {
+  const geo = searchInput.value;
+  request(
+    `http://api.openweathermap.org/data/2.5/weather?q=${geo}&units=metric&appid=${API_KEY}`
+  ).then((data) => {
+    city.textContent = data.name;
+    temp.textContent = data.main.temp;
+  });
+};

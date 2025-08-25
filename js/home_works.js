@@ -104,14 +104,11 @@ function renderCard(data) {
 
 window.addEventListener("scroll", scrollEnd);
 
-const request = new XMLHttpRequest();
-request.open("GET", "../data/characters.json");
-request.send();
-
-request.onload = () => {
-  characters = JSON.parse(request.response);
-  renderCard(characters);
-};
+async function request() {
+  const response = await fetch("../data/characters.json");
+  const data = await response.json();
+  renderCard(data);
+}
 
 function scrollEnd() {
   const scrollTop = document.documentElement.scrollTop;
