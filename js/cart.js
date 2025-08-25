@@ -35,7 +35,7 @@ function render({ shop }) {
           <img src="${item.displayAssets[0]?.full_background}" />
         </div>
         <div class="card-content">
-          <p>${item.Description || "Я лучше промолчу"}</p>
+          <p>${item.displayName || "Я лучше промолчу"}</p>
         </div>
       `;
 
